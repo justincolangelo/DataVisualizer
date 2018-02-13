@@ -17,7 +17,7 @@ namespace DataVisualizer.Controllers
 
         public ActionResult Index()
         {
-            var csvLocation = ConfigurationManager.AppSettings["csvLocation"];
+            var csvLocation = Server.MapPath(ConfigurationManager.AppSettings["csvLocation"]);
             var records = new List<DataModel>();
 
             try
